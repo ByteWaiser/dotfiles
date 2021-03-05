@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/ByteWaiser/Programming/Projects/DL/data/Full_Data/Add/data'
+let g:netrw_dirhist_1='/home/ByteWaiser/Programming/Python/NLP/HW - 9/web'
+let g:netrw_dirhist_0='/home/ByteWaiser/Programming/Projects/DL/app/gui'
+let g:netrw_dirhist_9='/home/ByteWaiser/Programming/Projects/DL/data/Full_Data/Add/data/Daily'
+let g:netrw_dirhist_8='/home/ByteWaiser/Programming/Projects/DL/data/Full_Data/Add/data'
+let g:netrw_dirhist_7='/home/ByteWaiser/Programming/Projects/DL/data/Full_Data/Add'
+let g:netrw_dirhist_6='/home/ByteWaiser/.config/awesome/widget/temperature'
+let g:netrw_dirhist_5='/home/ByteWaiser/.config/awesome/widget/wifi'
+let g:netrw_dirhist_4='/home/ByteWaiser/.config/awesome/widget/battery'
+let g:netrw_dirhist_3='/home/ByteWaiser/.config/bspwm'

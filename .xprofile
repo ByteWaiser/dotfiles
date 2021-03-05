@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export TERMINAL=alacritty
+setxkbmap -layout latam,us -variant ,altgr-intl -option grp:ctrls_toggle -option caps:swapescape &

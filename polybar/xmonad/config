@@ -1,0 +1,254 @@
+[colors]
+background = #04040e
+background-alt = #2e3133
+foreground = #dfdfdf
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+[settings]
+screenchange-reload = true
+
+[bar/root]
+monitor = eDP1
+height = 25
+bottom = false
+offset-y = 7
+radius = 10.0
+override-redirect = true
+pin-workspaces = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = JetBrains Mono:pixelsize=10;2
+font-1 = FontAwesome:pixelsize=10;2
+font-2 = DejaVu Sans:pixelsize=10;2
+
+cursor-click = pointer
+
+[bar/workspaces]
+inherit = bar/root
+width = 142
+offset-x = 7
+
+modules-left = workspaces
+
+[bar/battery]
+inherit = bar/root
+width = 73
+offset-x = 100%:-80
+
+tray-position = right
+tray-detached = true
+
+modules-left = battery
+
+[module/workspaces]
+type = internal/xworkspaces
+
+icon-0 = 1;
+icon-1 = 2;
+icon-2 = 3;
+icon-3 = 4;
+icon-4 = 5;
+
+enable-scroll = true
+
+label-active = " %icon% "
+label-active-background = #00000000
+
+label-occupied = " %icon% "
+label-urgent = " %icon% "
+label-empty = " %icon% "
+
+[module/battery]
+type = internal/battery
+
+format-full = <label-full>
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+label-full = " %percentage%%"
+label-charging = " %percentage%%"
+label-discharging = " %percentage%%"
+
+[bar/volume]
+inherit = bar/root
+width = 68
+offset-x = 100%:-155
+
+modules-center = volume
+
+[module/volume]
+type = internal/alsa
+label-volume =  %percentage%%
+label-muted =  %percentage%%
+
+[bar/time]
+inherit = bar/root
+width = 68
+offset-x = 100%:-230
+
+modules-center = time
+
+[module/time]
+type = internal/date
+time = %H:%M
+label = %time%
+
+[bar/date]
+inherit = bar/root
+width = 68
+offset-x = 100%:-305
+
+modules-center = date
+
+[module/date]
+type = internal/date
+date = %d.%m
+label = %date%
+
+# 75
+
+[bar/memory]
+inherit = bar/root
+width = 70
+offset-x = 100%:-382
+
+foreground = ${colors.foreground}
+modules-center = memory
+
+[module/memory]
+type = internal/memory
+
+interval = 1
+
+label = %gb_used%
+label-padding = 1
+
+[bar/music]
+inherit = bar/root
+width = 33%
+offset-x = 33%
+override-redirect = true
+background = #00000000
+foreground = ${colors.foreground}
+
+font-0 = JetBrains Mono:style=Bold:pixelsize=10;2
+
+modules-center = playerctl
+
+[module/playerctl]
+type = custom/script
+
+exec = "playerctl metadata -f '{{artist}} - {{title}}'"
+click-left = playerctl play-pause
+
+interval = 0.5
+
+[module/mpd]
+type = custom/script
+
+exec = "mpc current"
+click-left = mpc toggle
+
+interval = 0.5
+
+[bar/root_external]
+monitor = DP1
+height = 25
+bottom = false
+offset-y = 7
+radius = 10.0
+override-redirect = true
+pin-workspaces = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = JetBrains Mono:pixelsize=10;2
+font-1 = FontAwesome:pixelsize=10;2
+font-2 = DejaVu Sans:pixelsize=10;2
+
+cursor-click = pointer
+
+[bar/workspaces_external]
+inherit = bar/root_external
+width = 142
+offset-x = 7
+
+modules-left = workspaces_external
+
+[bar/battery_external]
+inherit = bar/root_external
+width = 73
+offset-x = 100%:-80
+
+tray-position = right
+tray-detached = true
+
+modules-left = battery
+
+[module/workspaces_external]
+type = internal/xworkspaces
+
+icon-1 = 6;
+icon-2 = 7;
+icon-3 = 8;
+icon-4 = "9;"
+icon-5 = "0;0"
+
+enable-scroll = true
+
+label-active = " %icon% "
+label-active-background = #00000000
+
+label-occupied = " %icon% "
+label-urgent = " %icon% "
+label-empty = " %icon% "
+
+[bar/volume_external]
+inherit = bar/root_external
+width = 68
+offset-x = 100%:-155
+
+modules-center = volume
+
+[bar/time_external]
+inherit = bar/root_external
+width = 68
+offset-x = 100%:-230
+
+modules-center = time
+
+[bar/date_external]
+inherit = bar/root_external
+width = 68
+offset-x = 100%:-305
+
+modules-center = date
+
+[bar/memory_external]
+inherit = bar/root_external
+width = 70
+offset-x = 100%:-382
+
+foreground = ${colors.foreground}
+modules-center = memory
+
+[bar/music_external]
+inherit = bar/root_external
+width = 33%
+offset-x = 33%
+override-redirect = true
+background = #00000000
+foreground = ${colors.foreground}
+
+font-0 = JetBrains Mono:style=Bold:pixelsize=10;2
+
+modules-center = playerctl

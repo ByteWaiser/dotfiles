@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo killall polybar
+sudo killall sxhkd
+
+bash ~/.config/bspwm/bspwmrc
